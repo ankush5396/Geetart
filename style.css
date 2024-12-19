@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    /* overflow: hidden; */
+}
+body{
+    background-color: rgba(0,0,33);
+    overflow-x: hidden;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+margin-top: 15px;
+}
+
+.heading{
+    margin-top: 10px;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar img{
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
+
+
+
+#carousel{
+    width: 100%;
+}
+
+.navbar-nav li a:hover{
+    color: white;
+}
+
+
+.box{
+    border: 1px solid red;
+    box-shadow: 5px 5px rgb(102, 100, 100);
+    border-radius: 5px;
+    margin: 30px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: transform .2s;
+}
+
+.box:hover{
+    
+    transform: scale(1.5); 
+}
+
+
+.oil-box img:hover{
+    transition: all 1s ease-in .5s;
+    transform: scale(1);
+}
+
+.box-img:hover{
+    transition: all 1s ease-in .5s;
+    transform: scale(1);
+}
+
+.box img{
+    border-radius: 5px;
+}
+
+
+.box1 img{
+    border-radius: 5px;
+}
+
+.box1{
+    border: 2px solid red;
+    box-shadow: 5px 5px rgb(102, 100, 100);
+    margin: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    display: grid;
+    transition-property: scale(1);
+}
+
+
+
+#ach-3m{
+    height: 60vh;
+}
+
+#ach-sub{
+    height: 60vh;
+}
+
+
+#ach-ambe{
+    height: 60vh;
+}
+
+
+
+.oil{background-color: rgba(241, 249, 194, 0.808);
+    
+}
+
+.about{
+    background-color: rgba(203, 163, 232, 0.845);
+}
+
+
+
+#village{
+    height: 35vh;
+} 
+
+#road{
+    height: 35vh;
+} 
+
+#oil-road-box{
+    margin-top: 5px;
+} 
+
+.gal-img{
+    height: 100%;
+    width: 100%;
+    
+    
+} 
+
+
+
+
+.oil-box{
+    margin-bottom: 30px;
+    
+}
+
+
+.card-body img{
+    min-height: 50%;
+    max-height: 200px;
+}
+
+#contact-img{
+    width: 100%;
+    height: 60vh;    
+}
+
+
+.icons{
+    display: flex;
+} 
+
+
+
+.icons i{
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+} 
+
+.icons i:hover{
+    color: rgb(234, 245, 246);
+    font-size: 100%;
+}
+
+.card-body{
+    background-color: rgb(75, 75, 167);
+}
+
+.pin:hover{
+    color: rgb(49, 57, 58);
+}
+
+.add:hover{
+    color: rgb(54, 61, 61);
+}
+
+.mail:hover{
+    color: rgb(50, 53, 53);
+}
+
+.phone:hover{
+    color: rgb(48, 52, 53);
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------------- */
+
+/* .gallery{
+    background: rgba(99, 243, 183, 0.915);
+} */
+
+/* #artist{
+    background-color: rgb(249, 212, 236);
+} */
+
+/* #gallery{
+    background-color: rgba(241, 249, 194, 0.808);
+} */
+
+/* .achievements{
+background-color: rgba(179, 247, 247, 0.755);
+} */
+
+/* #man{
+    height: 60vh;
+} */
+
+/* #krishna{
+    height: 35vh;
+} */
+
+/* #oil-row-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+} */
+
+/* -------------------------------------------------------- */
+/* media queries */
+@media only screen and (max-width : 375px ){
+    width: 100vw;
+    height: 50vw; 
+    margin: auto;
+
+}
+

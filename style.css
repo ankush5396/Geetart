@@ -12,10 +12,10 @@ html, body {
     overflow-x: hidden;
 }
 
-.element-seletor{
+/* .element-seletor{
     max-width: 100%;
     overflow: hidden;
-}
+} */
 
 h1 {
     font-family: 'Poppins', sans-serif;
@@ -265,11 +265,11 @@ h1 {
     
 }
 
-@media only screen and (max-width : 768px){
+/* @media only screen and (max-width : 768px){
     .element-seletor {
         width: 100%;
     }
-}
+} */
 
 @media only screen and (max-width : 1200px){
     #contact-img{

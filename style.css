@@ -5,9 +5,16 @@
 
 }
 
-body {
+html, body {
     background-color: rgba(0, 0, 33);
-    
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.element-seletor{
+    max-width: 100%;
+    overflow: hidden;
 }
 
 h1 {
@@ -256,6 +263,12 @@ h1 {
         padding: 5px;
     }
     
+}
+
+@media only screen and (max-width : 768px){
+    .element-seletor {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width : 1200px){

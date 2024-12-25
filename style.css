@@ -12,7 +12,10 @@ body {
     overflow-x: hidden;
 }
 
-
+img, div{
+    max-width: 100%;
+    box-sizing: border-box;
+}
 
 
 

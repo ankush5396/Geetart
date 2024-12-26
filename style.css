@@ -232,7 +232,8 @@ h1 {
     }
 
     .map-box{
-        
+        height: 250px;
+        width: 300px;
         justify-content: center;
         align-items: center;
         margin: auto;

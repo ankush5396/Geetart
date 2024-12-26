@@ -5,12 +5,10 @@
 
 }
 
-html{
-    overflow-x: hidden;
-}
 
 
-body {
+
+html, body {
     background-color: rgba(0, 0, 33);
     margin: 0;
     padding: 0;

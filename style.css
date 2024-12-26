@@ -215,7 +215,7 @@ h1 {
 @media only screen and (max-width : 375px) {
 
     body {
-        /* overflow: hidden; */
+        overflow: hidden;
         width: 100vw;
         height: 50vw;
         margin: auto;
@@ -232,6 +232,7 @@ h1 {
     }
 
     .map-box{
+        
         justify-content: center;
         align-items: center;
         margin: auto;

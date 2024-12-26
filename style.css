@@ -7,7 +7,7 @@
 
 
 
-html, body {
+body {
     background-color: rgba(0, 0, 33);
     margin: 0;
     padding: 0;
@@ -280,9 +280,7 @@ h1 {
         width: 100%;
     }
 
-    .menu{
-        flex-direction: column;
-    }
+    
 }
 
 @media only screen and (max-width : 1200px){

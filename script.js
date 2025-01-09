@@ -24,7 +24,7 @@ nameInput.addEventListener('input', () => {
     if (/[^a-zA-Z\s]/.test(nameValue)) {
         nameInput.classList.add('is-invalid'); // Add a red border or visual cue
     } else {
-      nameInput.classList.remove('is-invalid'); // Remove the invalid class
+        nameInput.classList.remove('is-invalid'); // Remove the invalid class
     }
 });
 
@@ -100,7 +100,7 @@ inputPin.addEventListener('input', () => {
 
 const fileInput = document.getElementById('file')
 
-inputFile.addEventListener('change', () => {
+fileInput.addEventListener('change', () => {
     const file = inputFile.files[0];
     const allowedExtensions = ['jpg', 'jpeg', 'png', 'pdf']; // Allowed file extensions
     const maxSize = 2 * 1024 * 1024; // Maximum size in bytes (2 MB)
@@ -123,6 +123,109 @@ inputFile.addEventListener('change', () => {
 
 
 
+const form1 = document.getElementById('serviceForm');
+
+form1.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission
+
+    let isValid = true; // Flag to track the validity of the form
+
+    // Name Validation
+    const nameInput = document.getElementById('name');
+    if (nameInput.value.trim() === '') {
+        nameInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        nameInput.classList.remove('is-invalid');
+    }
+
+    // Mobile Number Validation
+    const mobileInput = document.getElementById('mobile-number');
+    const mobilePattern = /^[0-9]{10}$/; // 10-digit mobile number validation
+    if (!mobilePattern.test(mobileInput.value.trim())) {
+        mobileInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        mobileInput.classList.remove('is-invalid');
+    }
+
+    // Address Validation
+    const addressInput = document.getElementById('address');
+    if (addressInput.value.trim() === '') {
+        addressInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        addressInput.classList.remove('is-invalid');
+    }
+
+    // City Validation
+    const cityInput = document.getElementById('city');
+    if (cityInput.value.trim() === '') {
+        cityInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        cityInput.classList.remove('is-invalid');
+    }
+
+    // State Validation
+    const stateSelect = document.getElementById('inputState');
+    if (stateSelect.value === 'Choose') {
+        stateSelect.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        stateSelect.classList.remove('is-invalid');
+    }
+
+    // Pin Code Validation
+    const pinInput = document.getElementById('pin');
+    const pinPattern = /^[0-9]{6}$/; // 6-digit pin code validation
+    if (!pinPattern.test(pinInput.value.trim())) {
+        pinInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        pinInput.classList.remove('is-invalid');
+    }
+
+    // Frame Size Validation
+    const frameSizeSelect = document.getElementById('inputState');
+    if (frameSizeSelect.value === 'Choose...') {
+        frameSizeSelect.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        frameSizeSelect.classList.remove('is-invalid');
+    }
+
+    // Frame Type Validation
+    const frameTypeSelect = document.getElementById('inputState');
+    if (frameTypeSelect.value === 'Choose...') {
+        frameTypeSelect.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        frameTypeSelect.classList.remove('is-invalid');
+    }
+
+    // File Validation
+    const fileInput = document.getElementById('file');
+    if (fileInput.files.length === 0) {
+        fileInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        fileInput.classList.remove('is-invalid');
+    }
+
+    // If all fields are valid, submit the form
+    if (isValid) {
+        alert('Form submitted successfully!');
+        form.reset(); // Reset the form fields after successful submission
+    }
+});
+
+
+
+
+
+
+
 
 
 
@@ -136,19 +239,19 @@ inputFile.addEventListener('change', () => {
 
 // -------Name--------
 // Select the input element
-const contactNameInput = document.getElementById('name2');
+const contactNameInput = document.getElementById('contactName');
 
-// Add an event listener for real-time validation
 contactNameInput.addEventListener('input', () => {
-    const nameValue2 = contactNameInput.value.trim();
+    const value = contactNameInput.value.trim(); // Get the input value and trim spaces
 
-    // Validate input (e.g., only alphabets allowed)
-    if (/^[a-zA-Z\s]*$/.test(nameValue2)) {
-        contactNameInput.classList.remove('is-invalid'); // Add a red border or visual cue
+    // Check for invalid characters
+    if (/[^a-zA-Z\s]/.test(value)) {
+        contactNameInput.classList.add('is-invalid'); // Add 'is-invalid' class for errors
     } else {
-        contactNameInput.classList.add('is-invalid'); // Remove the invalid class
+        contactNameInput.classList.remove('is-invalid'); // Remove 'is-invalid' class when valid
     }
 });
+
 
 // Optional: Add character count limit (e.g., max 50)
 contactNameInput.addEventListener('input', () => {
@@ -158,26 +261,6 @@ contactNameInput.addEventListener('input', () => {
         alert('Name cannot exceed 50 characters!');
     }
 }); 
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Get the input element by ID
-    const contactNameInput = document.getElementById('name2');
-
-    // Add an event listener for real-time validation
-    contactNameInput.addEventListener('input', () => {
-        const nameValue = contactNameInput.value.trim();
-
-        // Validate input: only alphabets and spaces allowed
-        if (/^[a-zA-Z\s]*$/.test(nameValue)) {
-            contactNameInput.classList.remove('is-invalid'); // Remove invalid feedback
-            contactNameInput.classList.add('is-valid');     // Optionally add valid feedback
-        } else {
-            contactNameInput.classList.add('is-invalid');   // Add invalid feedback
-            contactNameInput.classList.remove('is-valid'); // Optionally remove valid feedback
-        }
-    });
-});
-
 
 
 
@@ -191,8 +274,10 @@ emailInput.addEventListener('input', () => {
 
     if (email === "") {
         emailInput.classList.remove('is-invalid'); // Remove warning for empty input
+        emailInput.classList.remove('is-valid')
     } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         emailInput.classList.remove('is-invalid'); // Valid email
+        emailInput.classList.add('is-valid')
     } else {
         emailInput.classList.add('is-invalid'); // Invalid email
     }
@@ -241,6 +326,7 @@ messageInput.addEventListener('input', () => {
     if (message === "") {
         // No input, remove invalid class
         messageInput.classList.remove('is-invalid');
+        messageInput.classList.remove('is-valid')
     } else if (wordCount => 3 && wordCount <= 500) {
         // Valid word count, remove invalid class
         messageInput.classList.remove('is-invalid');
@@ -253,55 +339,55 @@ messageInput.addEventListener('input', () => {
 });
 
 
-// const form = document.getElementById('contactForm');
+const form = document.getElementById('contactForm');
 
-// form.addEventListener('submit', (event) => {
-//     event.preventDefault(); // Prevent default form submission
-//     let isValid = true;
+form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+    let isValid = true;
 
-//     const nameInput = document.getElementById('name2');
-//     if (nameInput.value.trim() === '') {
-//         nameInput.classList.add('is-invalid');
-//         isValid = false;
-//     } else {
-//         nameInput.classList.remove('is-invalid');
-//     }
+    const nameInput = document.getElementById('contactName');
+    if (nameInput.value.trim() === '') {
+        nameInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        nameInput.classList.remove('is-invalid');
+    }
 
-//     // Validate Email
-//     const emailInput = document.getElementById('email');
-//     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation regex
-//     if (!emailPattern.test(emailInput.value.trim())) {
-//         emailInput.classList.add('is-invalid');
-//         isValid = false;
-//     } else {
-//         emailInput.classList.remove('is-invalid');
-//     }
+    // Validate Email
+    const emailInput = document.getElementById('email');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation regex
+    if (!emailPattern.test(emailInput.value.trim())) {
+        emailInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        emailInput.classList.remove('is-invalid');
+    }
 
-//     // Validate Mobile Number
-//     const mobileInput = document.getElementById('mobile-number2');
-//     const mobilePattern = /^\d{10}$/; // Exactly 10 digits
-//     if (!mobilePattern.test(mobileInput.value.trim())) {
-//         mobileInput.classList.add('is-invalid');
-//         isValid = false;
-//     } else {
-//         mobileInput.classList.remove('is-invalid');
-//     }
+    // Validate Mobile Number
+    const mobileInput = document.getElementById('mobile-number2');
+    const mobilePattern = /^\d{10}$/; // Exactly 10 digits
+    if (!mobilePattern.test(mobileInput.value.trim())) {
+        mobileInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        mobileInput.classList.remove('is-invalid');
+    }
 
-//     // Validate Message
-//     const messageInput = document.getElementById('message');
-//     if (messageInput.value.trim() === '') {
-//         messageInput.classList.add('is-invalid');
-//         isValid = false;
-//     } else {
-//         messageInput.classList.remove('is-invalid');
-//     }
+    // Validate Message
+    const messageInput = document.getElementById('message');
+    if (messageInput.value.trim() === '') {
+        messageInput.classList.add('is-invalid');
+        isValid = false;
+    } else {
+        messageInput.classList.remove('is-invalid');
+    }
 
-//     // If all fields are valid, submit the form
-//     if (isValid) {
-//         alert('Form submitted successfully!');
-//         form.reset(); // Reset the form after submission
-//     }
-// });
+    // If all fields are valid, submit the form
+    if (isValid) {
+        alert('Message sent successfully!');
+        form.reset(); // Reset the form after submission
+    }
+});
 
 
 

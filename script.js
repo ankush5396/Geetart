@@ -1,4 +1,4 @@
-const links = document.getElementsByClassName('nav-link'); // Correct class name
+const links = document.getElementsByClassName('nav-link');
 
 for (let link of links) {
     link.addEventListener('mouseenter', () => {

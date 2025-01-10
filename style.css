@@ -235,7 +235,7 @@ h1 {
     body {
         /* overflow: hidden; */
         width: 100vw;
-    height: 50vw;
+    height: 50vh;
     }
 
     #carousel {
@@ -259,6 +259,10 @@ h1 {
         height: auto;
         margin: auto;
         padding: 5px;
+    }
+
+    #servicebutton{
+        margin-bottom: 5px;
     }
     
 }

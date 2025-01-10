@@ -58,6 +58,18 @@ h1 {
     color: blue;
 }
 
+.navbar {
+    display: flex;
+    flex-wrap: wrap; /* आइटम्स को लाइन ब्रेक करने की अनुमति देता है */
+    overflow: hidden; /* ओवरफ्लो होने पर अतिरिक्त कंटेंट छिपाता है */
+}
+
+.nav-item {
+    flex: 1 1 auto; /* आइटम्स को उपलब्ध स्पेस में एडजस्ट करता है */
+    text-align: center;
+    padding: 10px;
+}
+
 
 .box {
     border: 1px solid red;

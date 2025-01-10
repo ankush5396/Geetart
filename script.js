@@ -1,3 +1,28 @@
+const links = document.getElementsByClassName('nav-link'); // Correct class name
+
+for (let link of links) {
+    link.addEventListener('mouseenter', () => {
+        link.style.backgroundColor = 'orange';
+        link.style.border = '1px solid black';
+        link.style.borderRadius = '50%'
+        link.style.transition = "transform 0.5s";
+        link.style.transform = "scale(1.2)";
+        
+    });
+
+    link.addEventListener('mouseleave', () => {
+        link.style.backgroundColor = '';
+        link.style.border = '';
+        link.style.borderRadius = ''
+        link.style.transition = "";
+        link.style.transform = "";
+    });
+}
+
+
+
+
+
 // animation to box
 const hoverBoxes = document.querySelectorAll(".box");
 
@@ -388,19 +413,6 @@ form.addEventListener('submit', (event) => {
         form.reset(); // Reset the form after submission
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -183,7 +183,7 @@ h1 {
 }
 
 .icons i:hover {
-    color: red;
+    color: grey;
     font-size: 100%;
 }
 
@@ -191,21 +191,7 @@ h1 {
     background-color: rgb(75, 75, 167);
 }
 
-.pin:hover {
-    color: red;
-}
 
-.add:hover {
-    color: red;
-}
-
-.mail:hover {
-    color: red;
-}
-
-.phone:hover {
-    color: red;
-}
 
 
 

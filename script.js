@@ -216,7 +216,7 @@ form1.addEventListener('submit', function(event) {
     // If all fields are valid, submit the form
     if (isValid) {
         alert('Form submitted successfully!');
-        form.reset(); // Reset the form fields after successful submission
+        form1.reset(); // Reset the form fields after successful submission
     }
 });
 

@@ -12,11 +12,10 @@ body {
     overflow-x: hidden;
     width: 100%;
 }
-/* 
-div, section, container{
 
-overflow-x: hidden;
-} */
+
+container{overflow: hidden;}
+section{overflow: hidden;}
 
 
 h1 {
@@ -199,21 +198,7 @@ h1 {
     background-color: rgb(75, 75, 167);
 }
 
-.pin:hover {
-    color: red;
-}
 
-.add:hover {
-    color: red;
-}
-
-.mail:hover {
-    color: red;
-}
-
-.phone:hover {
-    color: red;
-}
 
 
 /* .map-box {

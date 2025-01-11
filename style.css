@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 
@@ -17,16 +17,47 @@ body {
     overflow-x: hidden;
 }
 
-img, div, section{
+img,
+div,
+section {
     max-width: 100%;
     height: auto;
     overflow-x: hidden;
 }
 
-.container{
+.container {
     width: 100%;
-    
+
 }
+
+.navbar {
+    overflow: hidden;
+    /* Prevents scroll bar */
+    position: fixed;
+    /* Navbar ko top par fix kare */
+    top: 0;
+    /* Ensure navbar stays at the top */
+    left: 0;
+    width: 100%;
+    /* Full width navbar */
+    z-index: 1030;
+    /* Ensure navbar stays above other elements */
+} 
+.navbar-brand img {
+    max-width: 100%; /* Prevents image overflow */
+    height: auto;
+}
+.navbar-nav {
+    margin: 0;
+    padding: 0;
+}
+.nav-link {
+    padding: 0.5rem 1rem;
+}
+.navbar-collapse {
+    overflow-y: auto; /* Prevents scroll issue in dropdowns */
+}
+
 
 h1 {
     font-family: 'Poppins', sans-serif;
@@ -46,13 +77,47 @@ h1 {
     width: 100%;
     height: auto;
 }
+
 .navbar img {
     width: 50px;
     height: auto;
     margin-left: 10px;
 }
 
+.navbar {
+    overflow: hidden;
 
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    /* Keeps the image responsive */
+    height: auto;
+}
+
+.navbar-nav {
+    margin: 0;
+    /* Remove unwanted margins */
+    padding: 0;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    /* Adjust padding for better layout */
+}
+
+
+.nav-item a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
 
 .navbar-nav li a:hover {
@@ -61,12 +126,15 @@ h1 {
 
 .navbar {
     display: flex;
-    flex-wrap: wrap; /* आइटम्स को लाइन ब्रेक करने की अनुमति देता है */
-    overflow: hidden; /* ओवरफ्लो होने पर अतिरिक्त कंटेंट छिपाता है */
+    flex-wrap: wrap;
+    /* आइटम्स को लाइन ब्रेक करने की अनुमति देता है */
+    overflow: hidden;
+    /* ओवरफ्लो होने पर अतिरिक्त कंटेंट छिपाता है */
 }
 
 .nav-item {
-    flex: 1 1 auto; /* आइटम्स को उपलब्ध स्पेस में एडजस्ट करता है */
+    flex: 1 1 auto;
+    /* आइटम्स को उपलब्ध स्पेस में एडजस्ट करता है */
     text-align: center;
     padding: 10px;
 }
@@ -126,12 +194,14 @@ h1 {
 
 
 /* achievements */
-#ach-3m, #ach-sub, #ach-ambe {
+#ach-3m,
+#ach-sub,
+#ach-ambe {
     height: auto;
     width: 100%;
     margin: auto;
     padding: 5px;
-    
+
 
 }
 
@@ -172,8 +242,8 @@ h1 {
 
 
 .card-body img {
-    
-    height: 100%;  
+
+    height: 100%;
     width: auto;
 }
 
@@ -194,7 +264,7 @@ h1 {
     padding: 5px;
     cursor: pointer;
     display: flex;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -236,7 +306,7 @@ h1 {
         height: 60vh;
     }
 
-    .map-box{
+    .map-box {
         height: 250px;
         width: 300px;
         justify-content: center;
@@ -246,12 +316,12 @@ h1 {
 }
 
 @media only screen and (max-width :600px) {
-    
+
 
     body {
         /* overflow: hidden; */
         width: 100vw;
-    height: 50vh;
+        height: 50vh;
     }
 
     #carousel {
@@ -264,48 +334,57 @@ h1 {
         height: 60vh;
     }
 
-    #contact-img{
+    #contact-img {
         height: auto;
     }
 
-    
+
 
     /* achievements */
-    #ach-sub,#ach-3m, #ach-ambe {
+    #ach-sub,
+    #ach-3m,
+    #ach-ambe {
         height: auto;
         margin: auto;
         padding: 5px;
     }
 
-    #servicebutton{
+    #servicebutton {
         margin-bottom: 25px;
     }
-    
+
 }
 
-@media only screen and (max-width : 768px){
-    body{
+@media only screen and (max-width : 768px) {
+    body {
         overflow-x: hidden;
     }
+
     .element-seletor {
         width: 100%;
     }
 
-    
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
 }
 
-@media only screen and (max-width : 1200px){
-    #contact-img{
+@media only screen and (max-width : 1200px) {
+    #contact-img {
         height: auto;
     }
 
     /* achievements */
-    #ach-3m, #ach-sub, #ach-ambe {
+    #ach-3m,
+    #ach-sub,
+    #ach-ambe {
         height: auto;
-        
+
         margin: auto;
         padding: 5px;
-    
+
     }
 }
 
@@ -323,18 +402,21 @@ h1 {
         width: 100%;
         height: 60vh;
     }
-    #contact-img{
+
+    #contact-img {
         height: auto;
     }
 
     /* achievements */
-    #ach-3m, #ach-sub, #ach-ambe {
+    #ach-3m,
+    #ach-sub,
+    #ach-ambe {
         height: auto;
         width: 50%;
         margin: auto;
         padding: 5px;
-    
+
     }
-    
-    
+
+
 }

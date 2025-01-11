@@ -1,12 +1,13 @@
-const links = document.getElementsByClassName('nav-link');
+const links = document.getElementsByClassName('nav-link'); 
 
 for (let link of links) {
     link.addEventListener('mouseenter', () => {
         link.style.backgroundColor = 'orange';
-        link.style.border = '1px solid black';
+        // link.style.border = '1px solid black';
         link.style.borderRadius = '50%'
-        link.style.transition = "transform 0.5s";
-        link.style.transform = "scale(1.2)";
+        // link.style.transition = "transform 0.5s";
+        // link.style.transform = "scale(1.2)";
+        link.style.color = 'white'
         
     });
 
@@ -46,7 +47,7 @@ nameInput.addEventListener('input', () => {
     const nameValue = nameInput.value.trim();
 
     // Validate input (e.g., only alphabets allowed)
-    if (/[^a-zA-Z\s]/.test(nameValue)) {
+    if (/[a-zA-Z\s]/.test(nameValue)) {
         nameInput.classList.add('is-invalid'); // Add a red border or visual cue
     } else {
         nameInput.classList.remove('is-invalid'); // Remove the invalid class
@@ -71,7 +72,7 @@ numberInput.addEventListener('input', () => {
     if (num === "") {
         numberInput.classList.remove('is-invalid')
         numberInput.classList.remove('is-valid')
-    } else if (/^[0-9]{10}$/.test(num)) {
+    } else if (/[0-9]{10}$/.test(num)) {
         numberInput.classList.remove('is-invalid')
         numberInput.classList.add('is-valid')
     } else {
@@ -86,7 +87,7 @@ inputAddress.addEventListener('input', () => {
     const address = inputAddress.value.trim()
     if (address === "") {
         inputAddress.classList.remove('is-invalid')
-    } else if (/^[A-Za-z0-9-,/\s]+$/.test(address)) {
+    } else if (/[A-Za-z0-9-,/\s]+$/.test(address)) {
         inputAddress.classList.remove('is-invalid')
     } else {
         inputAddress.classList.add('is-invalid')
@@ -100,7 +101,7 @@ inputCity.addEventListener('input', () => {
     const city = inputCity.value.trim()
     if (city === "") {
         inputCity.classList.remove('is-invalid')
-    } else if (/^[A-Za-z-\s]+$/.test(city)) {
+    } else if (/[A-Za-z-\s]+$/.test(city)) {
         inputCity.classList.remove('is-invalid')
     } else {
         inputCity.classList.add('is-invalid')

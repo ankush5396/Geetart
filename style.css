@@ -2,30 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 
+    /* overflow: hidden; */
 }
 
 body {
-    width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 33);
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
 }
-
-img,
-div,
-section {
-    max-width: 100%;
-    height: auto;
-    overflow-y: hidden;
-}
-
-.container {
-    width: 100%;
-}
-
 
 h1 {
     font-family: 'Poppins', sans-serif;
@@ -45,7 +30,6 @@ h1 {
     width: 100%;
     height: auto;
 }
-
 .navbar img {
     width: 50px;
     height: auto;
@@ -114,14 +98,12 @@ h1 {
 
 
 /* achievements */
-#ach-3m,
-#ach-sub,
-#ach-ambe {
+#ach-3m, #ach-sub, #ach-ambe {
     height: auto;
     width: 100%;
     margin: auto;
     padding: 5px;
-
+    
 
 }
 
@@ -196,44 +178,36 @@ h1 {
 
 
 .icons i {
-    margin: auto;
+    margin: 5px;
     padding: 5px;
     cursor: pointer;
 }
 
-.icons i{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    
+.icons i:hover {
+    color: red;
+    font-size: 100%;
 }
-
-
 
 .card-body {
     background-color: rgb(75, 75, 167);
 }
 
-#facebook:hover {
-    color: blue
+.pin:hover {
+    color: red;
 }
 
-#instagram:hover {
-    color: red
+.add:hover {
+    color: red;
 }
 
-#twitter:hover {
-    color: white
+.mail:hover {
+    color: red;
 }
 
-#linkedin:hover {
-    color: blue
+.phone:hover {
+    color: red;
 }
 
-#youtube:hover {
-    color: red
-}
 
 /* .map-box {
     margin: auto;
@@ -290,7 +264,7 @@ background-color: rgba(179, 247, 247, 0.755);
 
 @media only screen and (max-width : 375px) {
 
-
+  
 
     #carousel {
         width: 100%;
@@ -302,7 +276,7 @@ background-color: rgba(179, 247, 247, 0.755);
         height: 60vh;
     }
 
-    .map-box {
+    .map-box{
         justify-content: center;
         align-items: center;
         margin: auto;
@@ -310,12 +284,12 @@ background-color: rgba(179, 247, 247, 0.755);
 }
 
 @media only screen and (max-width :600px) {
-
+    
 
     body {
         /* overflow: hidden; */
         width: 100vw;
-        height: 50vw;
+    height: 50vw;
     }
 
     #carousel {
@@ -328,42 +302,38 @@ background-color: rgba(179, 247, 247, 0.755);
         height: 60vh;
     }
 
-    #contact-img {
+    #contact-img{
         height: auto;
     }
 
-
+    
 
     /* achievements */
-    #ach-sub,
-    #ach-3m,
-    #ach-ambe {
+    #ach-sub,#ach-3m, #ach-ambe {
         height: auto;
         margin: auto;
         padding: 5px;
     }
-
+    
 }
 
-@media only screen and (max-width : 1200px) {
-    #contact-img {
+@media only screen and (max-width : 1200px){
+    #contact-img{
         height: auto;
     }
 
     /* achievements */
-    #ach-3m,
-    #ach-sub,
-    #ach-ambe {
+    #ach-3m, #ach-sub, #ach-ambe {
         height: auto;
-
+        
         margin: auto;
         padding: 5px;
-
+    
     }
 }
 
 @media only screen and (max-width :2400) {
-
+    
 
     #carousel {
         width: 100%;
@@ -374,22 +344,19 @@ background-color: rgba(179, 247, 247, 0.755);
         width: 100%;
         height: 60vh;
     }
-
-    #contact-img {
+    #contact-img{
         height: auto;
     }
 
     /* achievements */
-    #ach-3m,
-    #ach-sub,
-    #ach-ambe {
+    #ach-3m, #ach-sub, #ach-ambe {
         height: auto;
         width: 50%;
         margin: auto;
         padding: 5px;
-
+    
     }
-
+    
     /* #ach-sub {
         height: 53vh;
         margin: auto;

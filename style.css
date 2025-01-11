@@ -10,7 +10,14 @@
 body {
     background-color: rgba(0, 0, 33);
     overflow-x: hidden;
+    width: 100%;
 }
+/* 
+div, section, container{
+
+overflow-x: hidden;
+} */
+
 
 h1 {
     font-family: 'Poppins', sans-serif;

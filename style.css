@@ -204,6 +204,7 @@ h1 {
 .icons i{
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .card-body {

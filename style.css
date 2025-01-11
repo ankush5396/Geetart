@@ -203,6 +203,7 @@ h1 {
 
 .icons i{
     display: flex;
+    justify-content: center;
 }
 
 .card-body {

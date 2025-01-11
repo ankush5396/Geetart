@@ -5,59 +5,24 @@
 
 }
 
-
-
-
 body {
-    width: 100%;
-    height: 100%;
+width: 100%;
+height: 100%;
     background-color: rgba(0, 0, 33);
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
-}
-
-img,
-div,
-section {
-    max-width: 100%;
-    height: auto;
-    overflow-x: hidden;
-}
-
-.container {
-    width: 100%;
-
-}
-
-.navbar {
-    overflow: hidden;
-    /* Prevents scroll bar */
-    position: fixed;
-    /* Navbar ko top par fix kare */
-    top: 0;
-    /* Ensure navbar stays at the top */
-    left: 0;
-    width: 100%;
-    /* Full width navbar */
-    z-index: 1030;
-    /* Ensure navbar stays above other elements */
-} 
-.navbar-brand img {
-    max-width: 100%; /* Prevents image overflow */
-    height: auto;
-}
-.navbar-nav {
     margin: 0;
     padding: 0;
 }
-.nav-link {
-    padding: 0.5rem 1rem;
-}
-.navbar-collapse {
-    overflow-y: auto; /* Prevents scroll issue in dropdowns */
+
+img, div, section{
+max-width: 100%;
+height: auto;
+/* overflow-x: hidden; */
 }
 
+.container{
+width: 100%;
+}
 
 h1 {
     font-family: 'Poppins', sans-serif;
@@ -77,66 +42,17 @@ h1 {
     width: 100%;
     height: auto;
 }
-
 .navbar img {
     width: 50px;
     height: auto;
     margin-left: 10px;
 }
 
-.navbar {
-    overflow: hidden;
 
-}
-
-.navbar {
-    overflow: hidden;
-}
-
-.navbar-brand img {
-    max-width: 100%;
-    /* Keeps the image responsive */
-    height: auto;
-}
-
-.navbar-nav {
-    margin: 0;
-    /* Remove unwanted margins */
-    padding: 0;
-}
-
-.nav-link {
-    padding: 0.5rem 1rem;
-    /* Adjust padding for better layout */
-}
-
-
-.nav-item a {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
 
 
 .navbar-nav li a:hover {
     color: blue;
-}
-
-.navbar {
-    display: flex;
-    flex-wrap: wrap;
-    /* आइटम्स को लाइन ब्रेक करने की अनुमति देता है */
-    overflow: hidden;
-    /* ओवरफ्लो होने पर अतिरिक्त कंटेंट छिपाता है */
-}
-
-.nav-item {
-    flex: 1 1 auto;
-    /* आइटम्स को उपलब्ध स्पेस में एडजस्ट करता है */
-    text-align: center;
-    padding: 10px;
 }
 
 
@@ -150,7 +66,7 @@ h1 {
     justify-content: center;
     align-items: center;
 
-    /* transition: transform .2s; */
+    transition: transform .2s;
 }
 
 .box1 img {
@@ -164,24 +80,24 @@ h1 {
     padding: 5px;
     border-radius: 5px;
     display: grid;
-    /* transition-property: scale(1); */
+    transition-property: scale(1);
 }
 
-/* .box:hover {
+.box:hover {
 
-    transform: scale(1.3);
-} */
+    transform: scale(1.5);
+}
 
 
-/* .oil-box img:hover {
+.oil-box img:hover {
     transition: all 1s ease-in .5s;
     transform: scale(1);
-} */
+}
 
-/* .box-img:hover {
+.box-img:hover {
     transition: all 1s ease-in .5s;
     transform: scale(1);
-} */
+}
 
 .box img {
     border-radius: 5px;
@@ -190,22 +106,37 @@ h1 {
 
 
 
-
+/* 
 
 
 /* achievements */
-#ach-3m,
-#ach-sub,
-#ach-ambe {
+#ach-3m, #ach-sub, #ach-ambe {
     height: auto;
     width: 100%;
     margin: auto;
     padding: 5px;
-
+    
 
 }
 
+/* #ach-3m {
+    height: 53vh;
+    margin: auto;
+    padding: 5px;
 
+}
+
+#ach-sub {
+    height: 53vh;
+    margin: auto;
+    padding: 5px;
+}
+
+#ach-ambe {
+    height: 53vh;
+    margin: auto;
+    padding: 5px;
+} */
 
 
 
@@ -242,9 +173,8 @@ h1 {
 
 
 .card-body img {
-
-    height: 100%;
-    width: auto;
+    min-height: 50%;
+    max-height: 200px;
 }
 
 #contact-img {
@@ -260,16 +190,13 @@ h1 {
 
 
 .icons i {
-    margin: auto;
+    margin: 5px;
     padding: 5px;
     cursor: pointer;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .icons i:hover {
-    color: grey;
+    color: red;
     font-size: 100%;
 }
 
@@ -277,7 +204,69 @@ h1 {
     background-color: rgb(75, 75, 167);
 }
 
+#facebook:hover{
+color: blue
+}
 
+#instagram:hover{
+color: red
+}
+
+#twitter:hover{
+color: white
+}
+
+#linkedin:hover{
+color: blue
+}
+#youtube:hover{
+color: red
+}
+
+/* .map-box {
+    margin: auto;
+    padding: auto;
+    justify-content: center;
+    /* border: 2px solid black;
+    border-radius: 5px; */
+
+
+
+
+/* ------------------------------------------------------------------------------- */
+
+/* .gallery{
+    background: rgba(99, 243, 183, 0.915);
+} */
+
+/* #artist{
+    background-color: rgb(249, 212, 236);
+} */
+
+/* #gallery{
+    background-color: rgba(241, 249, 194, 0.808);
+} */
+
+/* .achievements{
+background-color: rgba(179, 247, 247, 0.755);
+} */
+
+/* #man{
+    height: 60vh;
+} */
+
+/* #krishna{
+    height: 35vh;
+} */
+
+/* #oil-row-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+} */
 
 
 
@@ -289,12 +278,7 @@ h1 {
 
 @media only screen and (max-width : 375px) {
 
-    body {
-        overflow: hidden;
-        width: 100vw;
-        height: 50vw;
-        margin: auto;
-    }
+  
 
     #carousel {
         width: 100%;
@@ -306,9 +290,7 @@ h1 {
         height: 60vh;
     }
 
-    .map-box {
-        height: 250px;
-        width: 300px;
+    .map-box{
         justify-content: center;
         align-items: center;
         margin: auto;
@@ -316,12 +298,12 @@ h1 {
 }
 
 @media only screen and (max-width :600px) {
-
+    
 
     body {
         /* overflow: hidden; */
         width: 100vw;
-        height: 50vh;
+    height: 50vw;
     }
 
     #carousel {
@@ -334,64 +316,38 @@ h1 {
         height: 60vh;
     }
 
-    #contact-img {
+    #contact-img{
         height: auto;
     }
 
-
+    
 
     /* achievements */
-    #ach-sub,
-    #ach-3m,
-    #ach-ambe {
+    #ach-sub,#ach-3m, #ach-ambe {
         height: auto;
         margin: auto;
         padding: 5px;
     }
-
-    #servicebutton {
-        margin-bottom: 25px;
-    }
-
+    
 }
 
-@media only screen and (max-width : 768px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    .element-seletor {
-        width: 100%;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-}
-
-@media only screen and (max-width : 1200px) {
-    #contact-img {
+@media only screen and (max-width : 1200px){
+    #contact-img{
         height: auto;
     }
 
     /* achievements */
-    #ach-3m,
-    #ach-sub,
-    #ach-ambe {
+    #ach-3m, #ach-sub, #ach-ambe {
         height: auto;
-
+        
         margin: auto;
         padding: 5px;
-
+    
     }
 }
 
 @media only screen and (max-width :2400) {
-    body {
-        /* overflow: hidden; */
-    }
+    
 
     #carousel {
         width: 100%;
@@ -402,21 +358,28 @@ h1 {
         width: 100%;
         height: 60vh;
     }
-
-    #contact-img {
+    #contact-img{
         height: auto;
     }
 
     /* achievements */
-    #ach-3m,
-    #ach-sub,
-    #ach-ambe {
+    #ach-3m, #ach-sub, #ach-ambe {
         height: auto;
         width: 50%;
         margin: auto;
         padding: 5px;
-
+    
     }
-
-
+    
+    /* #ach-sub {
+        height: 53vh;
+        margin: auto;
+        padding: 5px;
+    }
+    
+    #ach-ambe {
+        height: 53vh;
+        margin: auto;
+        padding: 5px;
+    } */
 }

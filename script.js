@@ -47,8 +47,9 @@ nameInput.addEventListener('input', () => {
     const nameValue = nameInput.value.trim();
 
     // Validate input (e.g., only alphabets allowed)
-    if (/[a-zA-Z\s]/.test(nameValue)) {
-        nameInput.classList.add('is-invalid'); // Add a red border or visual cue
+    if (/[^a-zA-Z\s]/.test(nameValue)) {
+        // nameInput.classList.add('is-valid'); // Add a red border or visual cue
+        nameInput.classList.add('is-invalid')
     } else {
         nameInput.classList.remove('is-invalid'); // Remove the invalid class
     }

@@ -201,9 +201,8 @@ h1 {
     cursor: pointer;
 }
 
-.icons i:hover {
-    color: red;
-    font-size: 100%;
+.icons i{
+    display: flex;
 }
 
 .card-body {

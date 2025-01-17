@@ -1,108 +1,39 @@
-const userIcon = document.getElementById("user");
-const loginFormContainer = document.getElementById("login-form-container");
+// const userIcon = document.getElementById("user");
+// const loginFormContainer = document.getElementById("login-form-container");
 
-// Function to toggle the login form
-function toggleLoginForm() {
-    if (loginFormContainer.style.display === "block") {
-        loginFormContainer.style.display = "none";
-    } else {
-        loginFormContainer.style.display = "block";
-    }
-}
-
-// Function to hide the login form
-function hideLoginForm() {
-    loginFormContainer.style.display = "none";
-}
-
-// Add a click event listener to the user icon
-userIcon.addEventListener("click", function (event) {
-    event.stopPropagation(); // Prevent click event from propagating to the document
-    toggleLoginForm(); // Toggle the form
-});
-
-// Add a click event listener to the document
-document.addEventListener("click", function () {
-    hideLoginForm(); // Hide the form when clicking anywhere outside
-});
-
-// Prevent hiding the login form when clicking inside it
-loginFormContainer.addEventListener("click", function (event) {
-    event.stopPropagation(); // Stop propagation to avoid hiding the form
-});
-
-// Ensure the login form is hidden when the page loads
-window.addEventListener("load", function () {
-    hideLoginForm();
-});
-
-
-
-
-
-const loginmail = document.getElementById('loginemail');
-
-loginmail.addEventListener('input', () => {
-    const email = loginmail.value.trim();
-
-    if (email === "") {
-        loginmail.classList.remove('is-invalid'); // Remove warning for empty input
-        loginmail.classList.remove('is-valid')
-    } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        loginmail.classList.remove('is-invalid'); // Valid email
-        loginmail.classList.add('is-valid')
-    } else {
-        loginmail.classList.add('is-invalid'); // Invalid email
-    }
-});
-
-
-
-
-
-
-const loginpassword = document.getElementById('loginpassword');
-
-// Add an event listener for real-time password validation
-loginpassword.addEventListener('input', () => {
-    const password = loginpassword.value.trim();
-
-    // Password validation rules: At least 8 characters, including one uppercase, one lowercase, one digit, and one special character
-    const isValidPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
-
-    if (password === "") {
-        // Remove both valid and invalid classes for empty input
-        loginpassword.classList.remove('is-invalid');
-        loginpassword.classList.remove('is-valid');
-    } else if (isValidPassword) {
-        // Valid password
-        loginpassword.classList.remove('is-invalid');
-        loginpassword.classList.add('is-valid');
-    } else {
-        // Invalid password
-        loginpassword.classList.add('is-invalid');
-        loginpassword.classList.remove('is-valid');
-    }
-});
-
-
-
-
-// document.getElementById("password").addEventListener("blur", function () {
-//     const password = this.value.trim(); // Get the trimmed value
-
-//     if (!password) {
-//         // alert("Password is required.");
-//         this.classList.remove('is-valid'); // Remove valid class if present
-//         this.classList.add('is-invalid'); // Add invalid class
-//     } else if (6 < password.length > 12) {
-//         alert("Password must be 6 to 12 characters long.");
-//         this.classList.add('is-valid'); // Remove valid class
-//         this.classList.remove('is-invalid'); // Add invalid class
+// // Function to toggle the login form
+// function toggleLoginForm() {
+//     if (loginFormContainer.style.display === "block") {
+//         loginFormContainer.style.display = "none";
 //     } else {
-//         this.classList.remove('is-invalid'); // Remove invalid class
-//         this.classList.add('is-valid'); // Add valid class
+//         loginFormContainer.style.display = "block";
 //     }
+// }
+
+// // Function to hide the login form
+// function hideLoginForm() {
+//     loginFormContainer.style.display = "none";
+// }
+
+// // Add a click event listener to the user icon
+// userIcon.addEventListener("click", function (event) {
+//     event.stopPropagation(); // Prevent click event from propagating to the document
+//     toggleLoginForm(); // Toggle the form
+// });
+
+// // Add a click event listener to the document
+// document.addEventListener("click", function () {
+//     hideLoginForm(); // Hide the form when clicking anywhere outside
+// });
+
+// // Prevent hiding the login form when clicking inside it
+// loginFormContainer.addEventListener("click", function (e) {
+//     e.stopPropagation(); // Stop propagation to avoid hiding the form
+// });
+
+// // Ensure the login form is hidden when the page loads
+// window.addEventListener("load", function () {
+//     hideLoginForm();
 // });
 
 
@@ -110,71 +41,22 @@ loginpassword.addEventListener('input', () => {
 
 
 
-const emailInput1 = document.getElementById('loginemail');
-const passwordInput = document.getElementById('loginpassword');
-const loginForm = document.getElementById('loginForm');
 
-// Email validation on input
-emailInput1.addEventListener('input', () => {
-    const email = emailInput1.value.trim();
 
-    if (email === "") {
-        emailInput1.classList.remove('is-invalid');
-        emailInput1.classList.remove('is-valid');
-    } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        emailInput1.classList.remove('is-invalid');
-        emailInput1.classList.add('is-valid');
-    } else {
-        emailInput1.classList.add('is-invalid');
-        emailInput1.classList.remove('is-valid');
-    }
-});
 
-// Password validation on blur
-passwordInput.addEventListener("blur", function () {
-    const password = passwordInput.value.trim();
 
-    if (!password) {
-        alert("Password is required.");
-        passwordInput.classList.remove('is-valid');
-        passwordInput.classList.add('is-invalid');
-    } else if (password.length < 6 || password.length > 12) {
-        alert("Password must be 6 to 12 characters long.");
-        passwordInput.classList.add('is-valid');
-        passwordInput.classList.remove('is-invalid');
-    } else {
-        passwordInput.classList.remove('is-invalid');
-        passwordInput.classList.add('is-valid');
-    }
-});
 
-loginform.addEventListener("submit", (event) => {
-    // Get the values
-    const email = emailInput1.value.trim();
-    const password = passwordInput.value.trim();
 
-    // Validation flags
-    let isValid = true;
 
-    // Email validation
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert("Please enter a valid email address.");
-        isValid = false;
-    }
 
-    // Password validation
-    if (password.length < 6 || password.length > 12) {
-        alert("Password must be between 6 and 12 characters long.");
-        isValid = false;
-    }
 
-    // Prevent form submission if validation fails
-    if (isValid) {
-        event.preventDefault();
-        alert('logged in successfully')
-        loginform.reset()
-    }
-});
+
+
+
+
+
+
+
 
 
 

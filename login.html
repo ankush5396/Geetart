@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeetArt Registration</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="shortcut icon" href="Main logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!-- --------Bootstrap-CSS----------- -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+    <!-- ----------Google-Font------------ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+
+
+    <!-- --------font-awesome-cdn---------- -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+
+
+</head>
+
+<body>
+    <header id="home">
+
+        <nav class="navbar navbar-expand-lg navbar-light fs-5 "
+            style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1030; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html?#"><img src="Main logo.png" class="img-fluid" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark" aria-current="page" href="#">Login</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+
+    <section>
+        <div id="loginform">
+            <form action="" id="login-form-container">
+                <h3>Login</h3>
+                <input type="email" id="loginemail" class="form-control register " placeholder="Enter your email">
+                <input type="password" name="" id="loginpassword" class="register form-control"
+                    placeholder="Enter your password">
+                    <div>
+                        <span>Password should contain : </span> <br>
+                        <span>1 Capital letter</span> <br>
+                        <span>1 Small letter</span> <br>
+                        <span>1 Number</span> <br>
+                        <span>1 Special Character</span>
+                    </div>
+
+                <input type="submit" name="" id="login" class="register" value="Login">
+                <div>
+                    <label for="remember">Remember Me</label>
+                    <input type="checkbox" name="" id="remember">
+                </div>
+    
+                <p>Forgot password <a href="/passwordreset.html">click here</a></p>
+                <p>Don't have account <a href="/register.html">Register</a></p>
+
+            </form>
+
+            
+
+
+
+            <div>
+                <label for="remember">Remember Me</label>
+                <input type="checkbox" name="" id="remember">
+            </div>
+
+            <p>Forgot password <a href="/passwordreset.html">click here</a></p>
+            <p>Don't have account <a href="/register.html">Register</a></p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script>
+        const loginmail = document.getElementById('loginemail');
+
+        loginmail.addEventListener('input', () => {
+            const email = loginmail.value.trim();
+
+            if (email === "") {
+                loginmail.classList.remove('is-invalid'); // Remove warning for empty input
+                loginmail.classList.remove('is-valid')
+            } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                loginmail.classList.remove('is-invalid'); // Valid email
+                loginmail.classList.add('is-valid')
+            } else {
+                loginmail.classList.add('is-invalid'); // Invalid email
+            }
+        });
+
+
+
+        const loginpassword = document.getElementById('loginpassword');
+
+        // Add an event listener for real-time password validation
+        loginpassword.addEventListener('input', () => {
+            const password = loginpassword.value.trim();
+
+            // Password validation rules: At least 8 characters, including one uppercase, one lowercase, one digit, and one special character
+            const isValidPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+
+            if (password === "") {
+                // Remove both valid and invalid classes for empty input
+                loginpassword.classList.remove('is-invalid');
+                loginpassword.classList.remove('is-valid');
+            } else if (isValidPassword) {
+                // Valid password
+                loginpassword.classList.remove('is-invalid');
+                loginpassword.classList.add('is-valid');
+            } else {
+                // Invalid password
+                loginpassword.classList.add('is-invalid');
+                loginpassword.classList.remove('is-valid');
+            }
+        });
+
+
+
+
+        const loginForm = document.getElementById('login-form-container');
+        const loginEmail = document.getElementById('loginemail');
+        const loginPassword = document.getElementById('loginpassword');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // फॉर्म को सबमिट होने से रोकें
+            let isValid = true;
+
+            // ईमेल वेलिडेशन
+            const email = loginEmail.value.trim();
+            if (email === "") {
+                loginEmail.classList.add('is-invalid');
+                loginEmail.classList.remove('is-valid');
+                isValid = false;
+            } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                loginEmail.classList.add('is-valid');
+                loginEmail.classList.remove('is-invalid');
+            } else {
+                loginEmail.classList.add('is-invalid');
+                loginEmail.classList.remove('is-valid');
+                isValid = false;
+            }
+
+            // पासवर्ड वेलिडेशन
+            const password = loginPassword.value.trim();
+            const isValidPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+            if (password === "") {
+                loginPassword.classList.add('is-invalid');
+                loginPassword.classList.remove('is-valid');
+                isValid = false;
+            } else if (isValidPassword) {
+                loginPassword.classList.add('is-valid');
+                loginPassword.classList.remove('is-invalid');
+            } else {
+                loginPassword.classList.add('is-invalid');
+                loginPassword.classList.remove('is-valid');
+                isValid = false;
+            }
+
+            // यदि फॉर्म वैलिड है
+            if (isValid) {
+                alert('Logged in successfully!');
+                // यहां फॉर्म सबमिट करने का कोड लिखें
+            }
+        })
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

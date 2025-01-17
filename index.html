@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GeetArt</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Main logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -27,8 +28,8 @@
 
 
     <!-- --------font-awesome-cdn---------- -->
-    <!-- <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 
 
 
@@ -36,55 +37,89 @@
 
 <body>
 
+    
+
     <header id="home">
 
-        <nav class="navbar navbar-expand-lg navbar-light  fs-5 bg-info">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#home"><img src="Main logo.png" class="img-fluid" alt=""></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center m-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#gallery">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#achievements">Achievements</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#service">Service</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="#artist">Artist</a>
-                        </li>
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle"></i>
-                            </a>
-                            <ul class="dropdown-menu  text-center" aria-labelledby="navbarDropdown">
+        <nav class="navbar navbar-expand-lg navbar-light fs-5 " 
+        style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1030; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+       <div class="container-fluid">
+           <a class="navbar-brand" href="index.html?#"><img src="Main logo.png" class="img-fluid" alt=""></a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+               aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center m-auto">
+                   <li class="nav-item">
+                       <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link text-dark" href="#gallery">Gallery</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link text-dark" href="#achievements">Achievements</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link text-dark" href="#service">Service</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link text-dark" href="#artist">Artist</a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="#"><img src="user.png" alt="" id="user"></a>
+                   </li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+   
+    
+    </header>
 
-                                <li><a class="dropdown-item" href="#">My Orders</a></li>
-                                <li><a class="dropdown-item" href="#">My Wallet</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Log Out</a></li>
-                            </ul>
-                        </li> -->
 
-                    </ul>
 
+
+
+
+
+
+
+
+    <section>
+        <div id="loginform">
+            <form action="" id="login-form-container">
+                <h3>Login</h3>
+                <input type="email" id="loginemail" class="form-control register " placeholder="Enter your email">
+                <input type="password" name="" id="loginpassword" class="register form-control" placeholder="Enter your password">
+                <div>
+                    <span>Password should contain : </span> <br>
+                    <span>1 Capital letter</span> <br>
+                    <span>1 Small letter</span> <br>
+                    <span>1 Number</span> <br>
+                    <span>1 Special Character</span>
                 </div>
-            </div>
-        </nav>
+                <input type="submit" name="" id="login" class="register" value="Login">
+                <div>
+                    <label for="remember">Remember Me</label>
+                    <input type="checkbox" name="" id="remember">
+                </div>
+                
+                <p>Forgot password <a href="/passwordreset.html">click here</a></p>
+                <p>Don't have account <a href="/register.html">Register</a></p>
+                
+            </form>
+        </div>
+    </section>
+            
 
+
+
+
+
+
+    <section id="carousel">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -111,16 +146,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-
-
-
-
-
-    </header>
-
-
-
-
+    </section>
 
 
 
@@ -128,7 +154,7 @@
 
 
     <Section id="gallery">
-        <div class="container p-5 text-center">
+        <div class="container  p-5 text-center">
             <div class="heading">
                 <h1>Our <span class="text-primary">Gallery</span> </h1>
                 <hr class="w-25 m-auto">
@@ -219,56 +245,7 @@
                         </div>
                     </div>
 
-
-
-
-                    <!-- <div class="row">
-
-
-                        <div>
-                            <h1 class="mt-5">Oil-Painting</h1>
-                            <hr class="w-25 m-auto">
-                        </div>
-
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-12 d-grid gap-0">
-
-                            <div class="box oil-box">
-                                <img src="Imgs\Oil-Boat.jpg" class="gal-img img-fluid" alt="">
-                            </div>
-                            <div class="box oil-box">
-                                <img src="Imgs\Oil-Dolphin.jpg" class="gal-img img-fluid" alt="">
-                            </div>
-
-                        </div>
-
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-12 d-grid gap-0">
-
-                            <div class="box oil-box">
-                                <img src="Imgs\Oil-Krishan.jpg" id="krishna" class="gal-img img-fluid" alt="">
-                            </div>
-                            <div class="box oil-box">
-                                <img src="Imgs\Oil-Road.jpg" id="road" class="gal-img img-fluid" alt="">
-                            </div>
-
-                        </div>
-
-
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-12 d-grid">
-
-                            <div class="box oil-box">
-                                <img src="Imgs\Oil-Village.jpg" id="village" class="gal-img img-fluid" alt="">
-                            </div>
-                            <div class="box oil-box">
-                                <img src="Imgs\Oil-tree.jpg" id="road" class="gal-img img-fluid" alt="">
-                            </div>
-
-                        </div>
-
-                    </div> -->
                 </div>
-
-
-
             </div>
 
     </Section>
@@ -374,9 +351,9 @@
     <!-- ---------------services--------------- -->
 
 
-    <section class="service bg-light" id="service">
-        <div class="container pt-5">
-            <div class="text-center ">
+    <section class="service bg-light container-fluid" id="our-service-section">
+        <div class="container pt-5" id="service">
+            <div class="text-center mt-5">
                 <h1 data-aos="fade-up data-aos-offset=" 200">Our <span class="text-primary">Service</span> </h1>
                 <hr class="w-25 m-auto">
             </div>
@@ -404,8 +381,7 @@
                             </div>
                             <div class="col-12">
                                 <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address"
-                                    placeholder="Enter your Address">
+                                <input type="text" class="form-control" id="address" placeholder="Enter your Address">
                             </div>
 
                             <div class="col-md-4">
@@ -432,8 +408,8 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label for="inputState" class="form-label">Frame-Size</label>
-                                <select id="inputState" class="form-select">
+                                <label for="inputSize" class="form-label">Frame-Size</label>
+                                <select id="inputSize" class="form-select">
                                     <option selected>Choose...</option>
 
                                     <option>12*12</option>
@@ -461,8 +437,8 @@
 
 
                             <div class="col-md-4">
-                                <label for="inputState" class="form-label">Frame-Type</label>
-                                <select id="inputState" class="form-select">
+                                <label for="inputMaterial" class="form-label">Frame-Type</label>
+                                <select id="inputMaterial" class="form-select">
                                     <option selected>Choose...</option>
                                     <option>Wooden (Black)</option>
                                     <option>Wooden (Brown)</option>
@@ -474,8 +450,8 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label for="inputState" class="form-label">Frame-Type</label>
-                                <select id="inputState" class="form-select">
+                                <label for="inputMaterial2" class="form-label">Frame-Type</label>
+                                <select id="inputMaterial2" class="form-select">
                                     <option selected>Choose...</option>
                                     <option>Wooden (Black)</option>
                                     <option>Wooden (Brown)</option>
@@ -518,9 +494,9 @@
 
 
 
-    <section class="team my-5 text-center" id="artist">
-        <div class="container ">
-            <div class="text-center my-5">
+    <section class="team  container-fluid text-center" id="artist">
+        <div class="container pt-3">
+            <div class="text-center mt-5 ">
                 <h1 class="text-primary">ARTIST </h1>
                 <hr class="w-25 m-auto">
             </div>
@@ -588,19 +564,19 @@
                             <input type="text" class="form-control" id="contactName" placeholder="enter your name here">
                         </div>
                         <div class="col-md-6">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="abc@gmail.com">
+                            <label for="email2" class="form-label email">Email</label>
+                            <input type="email" id="email2" class="form-control" placeholder="abc@gmail.com">
+                            
                         </div>
                         <div class="col-md-6">
                             <label for="mobile-number2" class="form-label">Mobile No</label>
-                            <input type="tel" class="form-control" id="mobile-number2"
-                                placeholder="1234567890">
+                            <input type="tel" class="form-control" id="mobile-number2" placeholder="1234567890">
                         </div>
 
                         <div class="mb-3">
                             <label for="message" class="form-label">Your Message</label>
-                            <textarea class="form-control" id="message"
-                                placeholder="Enter your message here" rows="3"></textarea>
+                            <textarea class="form-control" id="message" placeholder="Enter your message here"
+                                rows="3"></textarea>
 
                         </div>
 
@@ -635,7 +611,7 @@
 
                 <div class="row">
 
-                    <div class="col-sm-12 col-md-5 col-lg-5 col-12  my-5" data-aos="zoom-in">
+                    <div class="col-sm-12 col-md-5 col-lg-5 col-12 my-5" data-aos="zoom-in">
                         <div>
                             <h1>GeetArt</h1>
                             <h4>
@@ -655,7 +631,7 @@
 
                         </div>
 
-                        <div class="icons mt-3">
+                        <div class="icons ">
                             <h1><i id="facebook" class="bi bi-facebook"></i></h1>
                             <h1><i id="instagram" class="bi bi-instagram"></i></h1>
                             <h1><i id="twitter" class="bi bi-twitter"></i></h1>
@@ -699,7 +675,7 @@
 
 
     <div class="container-fluid bg-dark text-white p-2 text-center fs-6 ">Copyright <i class="bi bi-c-circle"></i>
-        www.geetart.in All rights are reserved! 
+        www.geetart.in All rights are reserved!
     </div>
 
 

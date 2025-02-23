@@ -1,3 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+    /* overflow: hidden; */
+}
+
+body {
+    background-color: rgba(0, 0, 33);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+container{overflow: hidden;}
+section{overflow: hidden;} 
+
+
+
+#loginform{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 1000;
+    height: 100vh;
+    /* width: 100%; */
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(248, 242, 242);
+    margin: 2rem;
+    padding: 1.5rem, 0;
+    border: 1px solid black;
+width: 50rem;
+}
+
+#login-form-container {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
 
 
 
@@ -180,7 +231,8 @@
 
 /* Achievements Section */
 #gallery,  .achievements {
-    background: linear-gradient(135deg, #9c9696, #bb9c94);
+    /* background: linear-gradient(135deg, #9c9696, #bb9c94); */
+    background-color: pink;
     padding: 50px 0;
     text-align: center;
 }
